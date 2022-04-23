@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+@import "foundation/mixin";
+@import "foundation/base";
+@import "foundation/reset";
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+@import "layout/header";
+@import "layout/nav";
+@import "layout/spnav";
+@import "layout/main";
+@import "layout/footer";
+
+// ==========================================================================
+// Object
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+@import "object/component/hr";
+@import "object/component/heading";
+@import "object/component/button";
+@import "object/component/separation";
+@import "object/component/zoom";
+@import "object/component/icon";
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+@import "object/project/intro";
+@import "object/project/top";
+@import "object/project/scroll";
+@import "object/project/products";
+@import "object/project/banner";
+@import "object/project/banner-mordal";
+@import "object/project/site";
+@import "object/project/profile-summary";
+@import "object/project/profile-summary";
+
+@import "object/project/career";
+@import "object/project/skill";
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+@import "object/utility/utility";
+
+
+/* 修正中　*/
+.portfolio_reference {
+  display: block;
+  font-family: $ryumin;
+  @include fs(16);
+  width: 90%;
+  margin: (200 / $pcvw) * 100vw auto 0 auto;
+
+  @include sp {
+    margin: (200 / $spvw) * 100vw auto 0 auto;
+  }
+}
+
+/* cheesecake_more */
+.cheesecake_more {
+  @import "layout/header";
+
+  @import "layout/spnav";
+
+  .c-heading {
+    margin: (125 / $pcvw) * 100vw auto 0 auto;
+
+    @include sp {
+      margin: (125 / $spvw) * 100vw auto 0 auto;
+    }
+  }
+
+  .composition {
+    margin-top: (50 / $pcvw) * 100vw;
+
+    &_table {
+      width: 75%;
+      border-spacing: 0;
+      margin: (50 / $pcvw) * 100vw auto 0 auto;
+
+      &_line {
+        font-family: $ryumin;
+        @include fs(16);
+
+        &_cat {
+          width: 10%;
+          border-bottom: solid 2px #ddd;
+          padding: 10px 0;
+          text-align: left;
+          white-space: nowrap;
+        }
+
+        &_cont {
+          line-height: 1.4;
+          width: 65%;
+          border-bottom: solid 2px #ddd;
+          padding: 10px 0;
+
+          span {
+            display: block;
+          }
+
+          a {
+            display: block;
+            color: #afafb0;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .basis,
+  .fix {
+    width: 90%;
+    margin: (100 / $pcvw) * 100vw auto 0 auto;
+
+    &_figure {
+      margin-top: (50 / $pcvw) * 100vw;
+      &_figucaption {
+        font: {
+          family: $ryumin;
+          size: (24 / $pcvw) * 100vw;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+

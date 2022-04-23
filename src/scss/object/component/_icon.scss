@@ -1,0 +1,21 @@
+.c-icon{
+  display: inline-block;
+
+  &__image{
+    width: 30px;
+    height: 30px;
+    background: {
+      size:contain;
+      position:center;
+      repeat:no-repeat;
+    }
+
+    .twitter &{
+      background-image: url("/assets/image/twittter.svg");
+    }
+
+    .insta &{
+      background-image: url("/assets/image/insta.svg");
+    }
+  }
+}

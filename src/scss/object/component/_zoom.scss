@@ -1,0 +1,31 @@
+/*
+object/component/zoom
+*/
+
+/* zoom animation */
+
+.c-zoom{
+	overflow: hidden;
+	position: relative;
+	
+	&__image{
+		position: absolute;
+		transition:1s all;
+		
+		&:hover{
+			transform:scale(1.2,1.2);
+			transition:1s all;
+			cursor: pointer;
+			
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width:100%;
+				height:100%;
+				background: rgba(255, 255, 255, 0.5);
+			}
+		}
+	}
+}

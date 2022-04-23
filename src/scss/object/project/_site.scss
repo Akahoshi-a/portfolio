@@ -1,0 +1,172 @@
+/*
+object/project/site
+*/
+
+.p-site {
+  margin-top: 160px;
+  text-align: center;
+
+  &__lists {
+    margin-top: 80px;
+  }
+
+  &__list {
+    text-align: center;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__image {
+    background: {
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    margin: 0 auto;
+    width: 850px;
+    height: 350px;
+    position: relative;
+
+    @include tab{
+      width: 688px;
+      height: 188px;
+    }
+
+    @include sp {
+      width: (600 / $spvw) * 100vw;
+      height: (237 / $spvw) * 100vw;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+      }
+    }
+  }
+
+  &__dl {
+    width: 660px;
+    margin: 80px auto 0 auto;
+
+    @include sp {
+      width: 90%;
+    }
+  }
+
+  &__title {
+    font: {
+      family: $ryumin;
+      size: 32px;
+      weight: 300;
+    }
+    text-align: center;
+  }
+
+  &__hr {
+    display: inline-block;
+    background-color: $black;
+    width: 64px;
+    margin-top: 40px;
+  }
+
+  &__detail {
+    text-align: left;
+    margin-top: 40px;
+
+    &__paragraaph {
+      font: {
+        family: $ryumin;
+        weight: 300;
+      }
+      @include fs(16);
+      line-height: 1.5;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: baseline;
+
+    @include sp {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__text {
+      font-family: $ryumin;
+      @include fs(16);
+      margin-left: 16px;
+
+      @include sp {
+        margin: 16px 0 0 0;
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.p-site__no1__image {
+  background-image: url("/assets/image/cheesecake_screen@2x.png");
+}
+
+.p-site__no2 {
+  padding-top: 80px;
+
+  &__image {
+    background-image: url("/assets/image/kobgayasufarm_screen@2x.png");
+  }
+}
+
+.p-site__no3 {
+  padding-top: 80px;
+
+  &__image {
+    background-image: url("/assets/image/mynavi01_screen.png");
+  }
+}
+
+.p-site__no4 {
+  padding-top: 80px;
+
+  &__image {
+    background-image: url("/assets/image/mynavi02_screen.png");
+  }
+}
+
+.p-site__no5 {
+  padding-top: 80px;
+
+  &__image {
+    background-image: url("/assets/image/mynavi03_screen.png");
+  }
+}
+
+.p-site__no6 {
+  padding-top: 80px;
+
+  &__image {
+    background-image: url("/assets/image/mynavi03_screen.png");
+  }
+}

@@ -1,0 +1,52 @@
+/*
+foundation/mixin
+*/
+
+//メディアクエリ
+
+$sp:767px; //スマホ
+$tab:1279px; //tab
+$pc:768px; //pc,タブレット
+
+@mixin sp{
+	@media (max-width: ($sp)){
+		@content;
+	}
+}
+
+@mixin tab{
+	@media (max-width: ($tab)){
+		@content;
+	}
+}
+
+@mixin pc{
+	@media (min-width: ($pc)){
+		@content;
+	}
+}
+
+//sp ( /$spvw)*100vw
+$spvw:767;
+//pc ( /$pcvw)*100vw
+$pcvw:1280;
+
+//calc(px +  *(100vw - 320px)/447)
+//calc(px +  *(100vw - 768px)/512)
+
+//color
+$black:#525457;
+$white:#F7FAFC;
+$background-color:#EAEBEE;
+$shadow:#BBC3D4;
+
+//font
+$garamond:"garamond-premier-pro", "serif";
+//weight 400(regular) 500(medium)
+$ryumin:"a-otf-ryumin-pr6n", "serif";
+//weight 300
+
+//フォントサイズ
+@mixin fs($size: 16) {
+	font-size: ($size / 10) + rem;
+}

@@ -1,0 +1,56 @@
+/*
+object/component/heading
+*/
+
+.c-heading{
+	text-align: center;
+	margin:0 auto;
+	
+	&__title{
+		margin-bottom: 40px;
+		vertical-align: middle;
+		font: {
+			family:$garamond;
+			size: 64px;
+			weight:500;
+		}
+		
+		&__subtitle{
+			font: {
+				family:$ryumin;
+				size: 24px;
+			}
+			margin-left: 16px;
+		}
+	}
+	
+	&__detail{
+		font: {
+			family:$ryumin;
+			weight:300;
+		}
+		@include fs(16);
+		line-height: 2;
+		text-align: left;
+		
+		span{
+			display: block;
+		}
+	}
+
+	&__class{
+		font: {
+			family:$ryumin;
+			weight:300;
+		}
+		@include fs(16);
+		line-height: 2;
+		text-align: left;
+	}
+
+	&__sub{
+		font-family: $ryumin;
+		@include fs(24);
+    text-align: center;
+	}
+}

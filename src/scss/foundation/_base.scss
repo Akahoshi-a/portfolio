@@ -1,0 +1,19 @@
+/*
+foundation/base
+*/
+
+html{
+	font-size: 62.5% !important;
+}
+
+body {
+  font: {
+    family: $ryumin;
+    style: nomal;
+    weight: 300;
+  }
+  line-height: 2;
+  background-color: $white;
+
+  position: relative;
+}

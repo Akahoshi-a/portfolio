@@ -1,0 +1,254 @@
+/*
+object/project/banner
+*/
+
+.p-banner {
+  margin: 160px auto;
+
+  @include tab {
+    width: 100%;
+  }
+
+  &__lists {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 40px;
+
+    @include sp {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__list {
+    width: auto;
+    margin-top: 80px;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    font: {
+      family: $garamond;
+      size: 16px;
+      weight: 400;
+    }
+    color: $black;
+    line-height: 3;
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+
+    span {
+      font-size: 12px;
+      margin-left: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+      }
+    }
+  }
+
+  &__flame {
+    width: (288 / $pcvw) * 100vw;
+    height: (240 / $pcvw) * 100vw;
+
+    @include sp {
+      width: (500 / $spvw) * 100vw;
+      height: (416.67 / $spvw) * 100vw;
+    }
+  }
+
+  &__flame-long {
+    width: (457.14 / $pcvw) * 100vw;
+    height: (240 / $pcvw) * 100vw;
+
+    @include sp {
+      width: (500 / $spvw) * 100vw;
+      height: (416.67 / $spvw) * 100vw;
+    }
+  }
+
+  &__flame-square {
+    width: (240 / $pcvw) * 100vw;
+    height: (240 / $pcvw) * 100vw;
+
+    @include sp {
+      width: (500 / $spvw) * 100vw;
+      height: (500 / $spvw) * 100vw;
+    }
+  }
+
+  &__image {
+    height: (240 / $pcvw) * 100vw;
+    background: {
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+
+    @include sp {
+      height: (416.67 / $spvw) * 100vw;
+    }
+
+    .bannar1 & {
+      width: (288 / $pcvw) * 100vw;
+      background-image: url("/assets/image/banner14-2@2x.png");
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar2 & {
+      background-image: url("/assets/image/banner18@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar3 & {
+      background-image: url("/assets/image/banner21-2@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar4 & {
+      background-image: url("/assets/image/banner31@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar5 & {
+      background-image: url("/assets/image/banner44@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar6 & {
+      background-image: url("/assets/image/banner48@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar7 & {
+      background-image: url("/assets/image/banner50@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar8 & {
+      background-image: url("/assets/image/banner51@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar9 & {
+      background-image: url("/assets/image/banner52@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar10 & {
+      background-image: url("/assets/image/banner53-2@2x.png");
+      width: (457.14 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar11 & {
+      background-image: url("/assets/image/banner54@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar12 & {
+      background-image: url("/assets/image/banner56@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar13 & {
+      background-image: url("/assets/image/banner57@2x.png");
+      width: (288 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar14 & {
+      background-image: url("/assets/image/banner65@2x.png");
+      width: (240 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+        height: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar15 & {
+      background-image: url("/assets/image/banner69@2x.png");
+      width: (240 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+        height: (500 / $spvw) * 100vw;
+      }
+    }
+
+    .bannar16 & {
+      background-image: url("/assets/image/banner72.png");
+      width: (457.14 / $pcvw) * 100vw;
+
+      @include sp {
+        width: (500 / $spvw) * 100vw;
+      }
+    }
+  }
+}

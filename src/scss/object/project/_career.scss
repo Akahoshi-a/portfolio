@@ -1,0 +1,104 @@
+/*
+object/project/intro
+*/
+
+/* career */
+
+.p-career {
+  margin: 160px auto 0 auto;
+
+  &__lists {
+    margin-top: 80px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: baseline;
+    list-style: none;
+    margin-bottom: 40px;
+
+    @include sp {
+      flex-direction: column;
+    }
+  }
+
+  &__time {
+    font: {
+      family: $garamond;
+      weight: 400;
+    }
+    @include fs(30);
+    flex-shrink: 0;
+  }
+
+  &__dl {
+    margin-left: 40px;
+    font-family: $ryumin;
+
+    @include sp {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    @include fs(24);
+    line-height: 2;
+  }
+
+  &__text {
+    @include fs(16);
+    line-height: 2;
+    margin-top: 16px;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 160px;
+
+    @include sp {
+      flex-direction: column;
+    }
+
+    &__image1 {
+      background: {
+        image: url("/assets/image/career1.png");
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      width: 540px;
+      height: 305px;
+
+      @include sp {
+        width: 100%;
+        height: 240px;
+        margin: 0 auto;
+      }
+    }
+
+    &__image2 {
+      background: {
+        image: url("/assets/image/career2.png");
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+      width: 540px;
+      height: 305px;
+
+      @include sp {
+        width: 100%;
+        height: 240px;
+        margin: 30px auto 0 auto;
+      }
+    }
+  }
+  .hr {
+    width: 100%;
+  }
+}

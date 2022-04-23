@@ -1,0 +1,38 @@
+/*
+object/project/top
+*/
+
+/* top */
+.p-top {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 100;
+
+  @include sp {
+    padding-top: 0;
+  }
+
+  &__image {
+    background: {
+      image: url("/assets/image/top1.png");
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    width: 100vw;
+    height: 85vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include sp {
+      background: {
+        image: url("/assets/image/topsp.png");
+        size: cover;
+        position: center left;
+      }
+      height: 100vh;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/*
+layout/main
+*/
+
+.l-main{
+  margin: 0 auto;
+  width: 1120px;
+
+  @include tab{
+    width: 90%;
+    min-width: 688px;
+  }
+
+  @include sp{
+    width: 90%;
+    min-width: 0;
+  }
+}

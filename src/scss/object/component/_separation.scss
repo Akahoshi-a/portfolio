@@ -1,0 +1,12 @@
+/*
+object/component/button
+*/
+
+.c-separation{
+	width:100%;
+	margin:80px auto 0 auto;
+	
+	@include sp{
+		width: 90%;
+	}
+}

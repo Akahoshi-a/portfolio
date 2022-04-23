@@ -1,0 +1,162 @@
+/*
+layout/header
+*/
+.l-header {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  @include sp {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+      display: none;
+    }
+  }
+
+  /* pc　topでのみ大きく表示されるロゴ */
+  &__main-title {
+    display: inline-block;
+    position: absolute;
+    top: 120%;
+    left: 56px;
+    z-index: 1000;
+
+    @include sp {
+      top: 110px;
+      left: -70px;
+      transform: rotate(90deg);
+    }
+
+    &__link {
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &__logo1 {
+      width: 414px;
+      height: 100px;
+      background: {
+        image: url("/assets/image/toplogo.png");
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+
+      @include sp {
+        width: 300px;
+      }
+    }
+
+    &__logo2 {
+      margin-top: 16px;
+      width: 414px;
+      height: 20px;
+      background: {
+        image: url("/assets/image/toplogo2.png");
+        size: contain;
+        position: left;
+        repeat: no-repeat;
+      }
+
+      @include sp {
+        margin-top: 0;
+        width: 300px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 15px 0 0 50px;
+
+    @include sp {
+      display: none;
+    }
+
+    &__link {
+      display: flex;
+      align-items: baseline;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &__logo1 {
+      width: 124px;
+      height: 36px;
+      background: {
+        image: url("/assets/image/toplogo.png");
+        size: contain;
+        position: center;
+        repeat: no-repeat;
+      }
+
+      @include sp {
+        width: 300px;
+      }
+    }
+
+    &__logo2 {
+      margin-left: 26px;
+      width: 124px;
+      height: 20px;
+      background: {
+        image: url("/assets/image/toplogo2.png");
+        size: contain;
+        position: left;
+        repeat: no-repeat;
+      }
+
+      @include sp {
+        margin-top: 0;
+        width: 300px;
+      }
+    }
+  }
+
+  @import "nav";
+
+  &__hr {
+    width: 95%;
+
+    @include sp {
+      display: none !important;
+    }
+  }
+}
+
+// スクロールするとタイトルロゴが小さくなる
+
+#logo.mini {
+  width: 124px !important;
+  height: 36px;
+  position: fixed;
+  top: 10px;
+  z-index: 1000;
+
+  @include sp {
+    display: none;
+  }
+}
+
+#logo2.mini {
+  width: 124px !important;
+  margin: 0;
+  position: fixed;
+  top: 27px;
+  left: 200px;
+  z-index: 1000;
+
+  @include sp {
+    display: none;
+  }
+}

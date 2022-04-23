@@ -1,0 +1,29 @@
+/*
+layout/nav
+*/
+.l-nav {
+  display: flex;
+  justify-content: right;
+  margin: 15px 50px 0 50px;
+
+  @include sp {
+    display: none;
+  }
+
+  &__link {
+    display: block;
+    margin: auto 20px 0 0;
+    font: {
+      family: $garamond;
+      size: 24px;
+      weight: 500;
+    }
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .insta {
+    margin-right: 0 !important;
+  }
+}

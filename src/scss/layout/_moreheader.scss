@@ -1,0 +1,123 @@
+.more_header{
+    background-color:rgba(247,250,252,0.7);
+    text-align:center;
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:1;
+
+    @include sp{
+        display: none;
+    }
+    
+    &_nav{
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        margin:(31/$pcvw)*100vw (50/$pcvw)*100vw 0 (50/$pcvw)*100vw;
+
+        .title{
+            &_a{
+                display: flex;
+                vertical-align: baseline;
+                text-decoration:none;
+                cursor: pointer;
+
+                &_logo{
+                    background: {
+                        image:url("/assets/image/toplogo.png");
+                        size:contain;
+                        position:left center;
+                        repeat:no-repeat;
+                    }
+                    width:(124/$pcvw)*100vw;
+                    height:(36/$pcvw)*100vw;
+                }
+
+                &_logo2{
+                    background: {
+                        image:url("/assets/image/toplogo2.png");
+                        size:contain;
+                        position:left bottom;
+                        repeat:no-repeat;
+                    }
+                    width:(124/$pcvw)*100vw;
+                    height:(36/$pcvw)*100vw;
+                    margin-left:(10/$pcvw)*100vw;
+                }
+            }
+        }
+
+        &_menu{
+            display: flex;
+            align-items: flex-end;
+            list-style: none;
+
+            .icon{
+                display: inline-block;
+                margin:auto (20/$pcvw)*100vw auto 0;
+
+                &_a{
+                    display: block;
+                    cursor: pointer;
+
+                    &_figure{
+                        padding:(17/$pcvw)*100vw;
+                    }
+                }
+            }
+
+            .menu{
+                display: inline-block;
+                margin-right: (20/$pcvw)*100vw;
+
+                &_a{
+                    display: block;
+                    font: {
+                        family:$garamond;
+                        size:(24/$pcvw)*100vw;
+                        weight:500;
+                    }
+                    color:$black;
+                    text-decoration:none;
+                    cursor: pointer;
+                }
+            }
+
+            &_twitter{
+                margin-right:(20/$pcvw)*100vw;
+
+                &_a{
+
+                    &_figure{
+                        background: {
+                            image:url("/assets/image/twittter.svg");
+                            size:contain;
+                            position:center;
+                            repeat:no-repeat;
+                        }
+                    }
+                }
+            }
+
+            &_insta{
+                margin-right:0 !important;
+
+                &_a{
+                    &_figure{
+                        background: {
+                            image:url("/assets/image/insta.svg");
+                            size:contain;
+                            position:center;
+                            repeat:no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_hr{
+        width:95%;
+    }
+}

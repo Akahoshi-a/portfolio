@@ -1,0 +1,64 @@
+/*
+object/project/scroll
+*/
+
+/*スクロールアニメ*/
+.p-scroll {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  z-index: 100;
+
+  @include sp {
+    top: 65%;
+    left: -25px;
+  }
+
+  &__text {
+		width: 108px;
+    height: 28.8px;
+    background: {
+      image: url("/assets/image/scroll.png");
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+    transform: rotate(90deg);
+
+    @include sp {
+      width: 120px;
+      height: 35px;
+    }
+  }
+
+  &__down {
+		margin: 40px auto 0 auto;
+    width: 2px;
+    height: 120px;
+    background: $white;
+    animation: scrollDown 2s ease infinite;
+
+    @include sp {
+      margin: 70px auto 0 auto;
+    }
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  45% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  55% {
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
